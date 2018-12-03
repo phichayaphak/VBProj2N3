@@ -78,6 +78,12 @@
     <Compile Include="frmFirst.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSecondForm.Designer.vb">
+      <DependentUpon>frmSecondForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecondForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,6 +103,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmFirst.resx">
       <DependentUpon>frmFirst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecondForm.resx">
+      <DependentUpon>frmSecondForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -137,7 +137,7 @@ Partial Class frmFirst
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(441, 288)
+        Me.ClientSize = New System.Drawing.Size(468, 303)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.txtPayRate)

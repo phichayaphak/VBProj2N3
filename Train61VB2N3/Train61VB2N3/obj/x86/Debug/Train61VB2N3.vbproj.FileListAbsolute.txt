@@ -7,3 +7,13 @@ D:\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.vbproj.GenerateResource.
 D:\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.exe
 D:\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.xml
 D:\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.pdb
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.exe
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.xml
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.pdb
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\bin\Debug\Train61VB2N3.exe
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\bin\Debug\Train61VB2N3.pdb
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\bin\Debug\Train61VB2N3.xml
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmFirst.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSecondForm.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.Resources.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.vbproj.GenerateResource.Cache
