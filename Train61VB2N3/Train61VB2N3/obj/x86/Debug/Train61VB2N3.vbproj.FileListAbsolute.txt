@@ -17,3 +17,7 @@ D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmFirst.resou
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSecondForm.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.Resources.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.vbproj.GenerateResource.Cache
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmThird.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmLab1.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmLab2.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmFifth.resources

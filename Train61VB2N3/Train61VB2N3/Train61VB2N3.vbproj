@@ -72,16 +72,40 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmFifth.Designer.vb">
+      <DependentUpon>frmFifth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFifth.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmFirst.Designer.vb">
       <DependentUpon>frmFirst.vb</DependentUpon>
     </Compile>
     <Compile Include="frmFirst.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLab1.Designer.vb">
+      <DependentUpon>frmLab1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLab1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLab2.Designer.vb">
+      <DependentUpon>frmLab2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLab2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSecondForm.Designer.vb">
       <DependentUpon>frmSecondForm.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSecondForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThird.Designer.vb">
+      <DependentUpon>frmThird.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThird.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,11 +125,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmFifth.resx">
+      <DependentUpon>frmFifth.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFirst.resx">
       <DependentUpon>frmFirst.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLab1.resx">
+      <DependentUpon>frmLab1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLab2.resx">
+      <DependentUpon>frmLab2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSecondForm.resx">
       <DependentUpon>frmSecondForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThird.resx">
+      <DependentUpon>frmThird.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
