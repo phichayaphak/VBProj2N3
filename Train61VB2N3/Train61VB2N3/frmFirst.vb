@@ -6,7 +6,7 @@
         'อัตราค่างจ้าง => txtPayRate.text
         'lblResult.text 
         lblResult.Text = Val(txtHours.Text) * Val(txtPayRate.Text)
-        lblResult.BackColor = Color.Red
+        lblResult.BackColor = Color.Brown
 
 
     End Sub
@@ -28,6 +28,25 @@
     End Sub
 
     Private Sub txtPayRate_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPayRate.TextChanged
+
+    End Sub
+
+    Private Sub frmFirst_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Text = myProjectName
+    End Sub
+
+    Private Sub btnMsg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMsg.Click
+        Dim result As DialogResult
+
+        'If MessageBox.Show("Sawadee", "Hi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) 
+        ' = Windows.Forms.DialogResult.Yes Then
+
+        result = MessageBox.Show("Sawadee", "Hi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = Windows.Forms.DialogResult.Yes Then
+            Me.BackColor = Color.Blue
+        Else
+            Me.BackColor = Color.Pink
+        End If
 
     End Sub
 End Class

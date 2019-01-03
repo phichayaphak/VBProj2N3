@@ -43,7 +43,7 @@ Partial Class frmFifth
         '
         'btnCalculate
         '
-        Me.btnCalculate.BackColor = System.Drawing.Color.Green
+        Me.btnCalculate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnCalculate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnCalculate.ForeColor = System.Drawing.Color.Black
         Me.btnCalculate.Location = New System.Drawing.Point(342, 73)
@@ -51,6 +51,7 @@ Partial Class frmFifth
         Me.btnCalculate.Size = New System.Drawing.Size(70, 36)
         Me.btnCalculate.TabIndex = 7
         Me.btnCalculate.Text = "คำนวณ"
+        Me.btnCalculate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCalculate.UseVisualStyleBackColor = False
         '
         'txtGrade

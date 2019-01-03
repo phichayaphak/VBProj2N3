@@ -15,7 +15,8 @@
     Private Sub frmThird_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim today As Date = Date.Now
         lblToday.Text = FormatDateTime(today, DateFormat.LongDate)
-
+        myProjectName = "BIS Sale System Naja"
+        Me.Text = myProjectName
     End Sub
 
     Private Sub lblBgRed_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBgRed.Click

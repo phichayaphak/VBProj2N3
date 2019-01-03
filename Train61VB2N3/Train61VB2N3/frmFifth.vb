@@ -1,20 +1,6 @@
 ﻿Public Class frmFifth
-
-    Private Sub btnCalculate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalculate.Click
-        Dim Grade As Double = Val(txtGrade.Text)
-        Dim Result As String
-        If Grade >= 3.75 Then
-            Result = "ได้รับเกียรตินิยมอันดับ 1"
-        ElseIf Grade >= 3.5 Then
-            Result = "ได้รับเกียรตินิยมอันดับ 2"
-        ElseIf Grade >= 2.0 Then
-            Result = "ได้รับปริญญาบัตรปกติ"
-        Else
-            Result = "ไม่อยู่ในเกณฑ์รับปริญญา "
-        End If
-        lblResult.Text = Result
-
-    End Sub
+    Dim TAX As Double
+    
 
     Private Sub btnPaid_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPaid.Click
         Dim age As Integer = Val(txtAge.Text)
@@ -27,10 +13,11 @@
             paid = 0
         End If
         lblPaid.Text = FormatNumber(paid, 2)
+        TAX = paid * 0.05
     End Sub
 
     Private Sub btnTax_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTax.Click
-        Dim incomes, tax As Double
+        Dim incomes As Double
 
         incomes = Val(txtIncomes.Text)
         If incomes < 200000 Then
@@ -42,6 +29,27 @@
         End If
         lblTax.Text = FormatNumber(tax, 2)
 
+
     End Sub
    
+    Private Sub btnCalculate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalculate.Click
+        Dim Grade As Double = Val(txtGrade.Text)
+        Dim Result As String
+
+        If Grade <> 3.75 Then
+            Result = "ได้รับเกียรตินิยมอันดับ 1"
+        ElseIf Grade >= 3.5 Then
+            Result = "ได้รับเกียรตินิยมอันดับ 2"
+        ElseIf Grade >= 2.0 Then
+            Result = "ได้รับปริญญาบัตรปกติ"
+        Else
+            Result = "ไม่อยู่ในเกณฑ์รับปริญญา "
+        End If
+        lblResult.Text = Result
+        lblPaid.Text = FormatNumber(Result, 2)
+    End Sub
+
+    Private Sub frmFifth_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

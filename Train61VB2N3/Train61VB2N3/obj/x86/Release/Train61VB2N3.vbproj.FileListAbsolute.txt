@@ -9,3 +9,8 @@ D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.vbproj.Gener
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.exe
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.xml
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.pdb
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.frmFifth.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.frmFive.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.frmLab1.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.frmLab2.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Release\Train61VB2N3.frmMenu.resources

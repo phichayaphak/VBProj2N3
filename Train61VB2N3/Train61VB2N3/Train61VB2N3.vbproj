@@ -84,6 +84,12 @@
     <Compile Include="frmFirst.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmFive.Designer.vb">
+      <DependentUpon>frmFive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFive.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLab1.Designer.vb">
       <DependentUpon>frmLab1.vb</DependentUpon>
     </Compile>
@@ -94,6 +100,12 @@
       <DependentUpon>frmLab2.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLab2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSecondForm.Designer.vb">
@@ -123,6 +135,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="myModule.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmFifth.resx">
@@ -131,11 +144,17 @@
     <EmbeddedResource Include="frmFirst.resx">
       <DependentUpon>frmFirst.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFive.resx">
+      <DependentUpon>frmFive.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLab1.resx">
       <DependentUpon>frmLab1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLab2.resx">
       <DependentUpon>frmLab2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSecondForm.resx">
       <DependentUpon>frmSecondForm.vb</DependentUpon>

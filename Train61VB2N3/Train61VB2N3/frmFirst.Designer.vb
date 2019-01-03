@@ -31,6 +31,7 @@ Partial Class frmFirst
         Me.txtPayRate = New System.Windows.Forms.TextBox()
         Me.btnCalculate = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnMsg = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -132,12 +133,25 @@ Partial Class frmFirst
         Me.btnClose.Text = "ปิด"
         Me.btnClose.UseVisualStyleBackColor = False
         '
+        'btnMsg
+        '
+        Me.btnMsg.BackColor = System.Drawing.Color.Chartreuse
+        Me.btnMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btnMsg.ForeColor = System.Drawing.Color.Black
+        Me.btnMsg.Location = New System.Drawing.Point(292, 269)
+        Me.btnMsg.Name = "btnMsg"
+        Me.btnMsg.Size = New System.Drawing.Size(101, 36)
+        Me.btnMsg.TabIndex = 3
+        Me.btnMsg.Text = "Msg Test"
+        Me.btnMsg.UseVisualStyleBackColor = False
+        '
         'frmFirst
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(468, 303)
+        Me.ClientSize = New System.Drawing.Size(468, 336)
+        Me.Controls.Add(Me.btnMsg)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.txtPayRate)
@@ -162,5 +176,6 @@ Partial Class frmFirst
     Friend WithEvents txtPayRate As System.Windows.Forms.TextBox
     Friend WithEvents btnCalculate As System.Windows.Forms.Button
     Friend WithEvents btnClose As System.Windows.Forms.Button
+    Friend WithEvents btnMsg As System.Windows.Forms.Button
 
 End Class

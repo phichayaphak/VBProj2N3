@@ -14,4 +14,8 @@
         lblResult.Text = result
 
     End Sub
+
+    Private Sub frmSecondForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Text = myProjectName
+    End Sub
 End Class
