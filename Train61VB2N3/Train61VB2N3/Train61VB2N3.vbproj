@@ -102,6 +102,12 @@
     <Compile Include="frmLab2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMenu.Designer.vb">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
@@ -112,6 +118,12 @@
       <DependentUpon>frmSecondForm.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSecondForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSix.Designer.vb">
+      <DependentUpon>frmSix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSix.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThird.Designer.vb">
@@ -153,11 +165,17 @@
     <EmbeddedResource Include="frmLab2.resx">
       <DependentUpon>frmLab2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSecondForm.resx">
       <DependentUpon>frmSecondForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSix.resx">
+      <DependentUpon>frmSix.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThird.resx">
       <DependentUpon>frmThird.vb</DependentUpon>
@@ -179,6 +197,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mainpicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="banner_hardware.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

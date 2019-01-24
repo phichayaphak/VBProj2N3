@@ -7,13 +7,26 @@
         Dim getSalary As Boolean = chkGetSalary.Checked
         Dim paid As Double
 
-        If age >= 60 And getSalary = False Then
+        
+
+        If age >= 60 And chkGetSalary.Checked = False Then
             paid = 500
         Else
             paid = 0
         End If
+
         lblPaid.Text = FormatNumber(paid, 2)
         TAX = paid * 0.05
+        Dim result As DialogResult
+
+        result = MessageBox.Show("Are you the man?", "error",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Exclamation)
+        If result = Windows.Forms.DialogResult.Yes Then
+            paid += 500
+            lblPaid.Text = FormatNumber(paid, 2)
+        End If
+
     End Sub
 
     Private Sub btnTax_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTax.Click
@@ -50,6 +63,14 @@
     End Sub
 
     Private Sub frmFifth_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub chkGetSalary_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkGetSalary.CheckedChanged
+
+    End Sub
+
+    Private Sub chkGetSalary_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkGetSalary.Click
 
     End Sub
 End Class

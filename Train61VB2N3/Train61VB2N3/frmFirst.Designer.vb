@@ -162,6 +162,7 @@ Partial Class frmFirst
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmFirst"
+        Me.ShowInTaskbar = False
         Me.Text = "Welcome to Train61VB2N3 Project "
         Me.ResumeLayout(False)
         Me.PerformLayout()

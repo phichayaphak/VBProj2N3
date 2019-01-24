@@ -23,3 +23,5 @@ D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmLab2.resour
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmFifth.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmMenu.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmFive.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmMain.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSix.resources

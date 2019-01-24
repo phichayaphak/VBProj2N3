@@ -32,6 +32,13 @@ Partial Class frmFive
         Me.btnSort = New System.Windows.Forms.Button()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtSale = New System.Windows.Forms.TextBox()
+        Me.chkManager = New System.Windows.Forms.CheckBox()
+        Me.lblCommission = New System.Windows.Forms.Label()
+        Me.btnCal = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblSale = New System.Windows.Forms.Label()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lstData
@@ -54,7 +61,7 @@ Partial Class frmFive
         '
         'txtInput
         '
-        Me.txtInput.Location = New System.Drawing.Point(178, 58)
+        Me.txtInput.Location = New System.Drawing.Point(177, 58)
         Me.txtInput.MaxLength = 3
         Me.txtInput.Name = "txtInput"
         Me.txtInput.Size = New System.Drawing.Size(65, 20)
@@ -96,7 +103,7 @@ Partial Class frmFive
         '
         'btnSort
         '
-        Me.btnSort.Location = New System.Drawing.Point(184, 220)
+        Me.btnSort.Location = New System.Drawing.Point(176, 251)
         Me.btnSort.Name = "btnSort"
         Me.btnSort.Size = New System.Drawing.Size(59, 25)
         Me.btnSort.TabIndex = 1
@@ -123,11 +130,77 @@ Partial Class frmFive
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Total"
         '
+        'txtSale
+        '
+        Me.txtSale.Location = New System.Drawing.Point(11, 21)
+        Me.txtSale.MaxLength = 300
+        Me.txtSale.Name = "txtSale"
+        Me.txtSale.Size = New System.Drawing.Size(65, 20)
+        Me.txtSale.TabIndex = 2
+        '
+        'chkManager
+        '
+        Me.chkManager.AutoSize = True
+        Me.chkManager.Location = New System.Drawing.Point(11, 51)
+        Me.chkManager.Name = "chkManager"
+        Me.chkManager.Size = New System.Drawing.Size(68, 17)
+        Me.chkManager.TabIndex = 5
+        Me.chkManager.Text = "Manager"
+        Me.chkManager.UseVisualStyleBackColor = True
+        '
+        'lblCommission
+        '
+        Me.lblCommission.BackColor = System.Drawing.Color.Yellow
+        Me.lblCommission.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblCommission.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lblCommission.Location = New System.Drawing.Point(6, 87)
+        Me.lblCommission.Name = "lblCommission"
+        Me.lblCommission.Size = New System.Drawing.Size(131, 33)
+        Me.lblCommission.TabIndex = 3
+        Me.lblCommission.Text = " "
+        '
+        'btnCal
+        '
+        Me.btnCal.Location = New System.Drawing.Point(77, 16)
+        Me.btnCal.Name = "btnCal"
+        Me.btnCal.Size = New System.Drawing.Size(59, 25)
+        Me.btnCal.TabIndex = 1
+        Me.btnCal.Text = "Cal"
+        Me.btnCal.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.txtSale)
+        Me.GroupBox1.Controls.Add(Me.chkManager)
+        Me.GroupBox1.Controls.Add(Me.lblSale)
+        Me.GroupBox1.Controls.Add(Me.lblCommission)
+        Me.GroupBox1.Controls.Add(Me.btnCal)
+        Me.GroupBox1.Location = New System.Drawing.Point(178, 231)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(162, 175)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'lblSale
+        '
+        Me.lblSale.BackColor = System.Drawing.Color.Red
+        Me.lblSale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblSale.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lblSale.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblSale.Location = New System.Drawing.Point(6, 139)
+        Me.lblSale.Name = "lblSale"
+        Me.lblSale.Size = New System.Drawing.Size(131, 33)
+        Me.lblSale.TabIndex = 3
+        Me.lblSale.Text = " "
+        '
         'frmFive
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(345, 469)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.txtKey)
@@ -140,6 +213,8 @@ Partial Class frmFive
         Me.Controls.Add(Me.lstData)
         Me.Name = "frmFive"
         Me.Text = "frmFive"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -154,4 +229,10 @@ Partial Class frmFive
     Friend WithEvents btnSort As System.Windows.Forms.Button
     Friend WithEvents lblTotal As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtSale As System.Windows.Forms.TextBox
+    Friend WithEvents chkManager As System.Windows.Forms.CheckBox
+    Friend WithEvents lblCommission As System.Windows.Forms.Label
+    Friend WithEvents btnCal As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblSale As System.Windows.Forms.Label
 End Class
