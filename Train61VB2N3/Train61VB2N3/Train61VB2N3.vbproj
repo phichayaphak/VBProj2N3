@@ -127,6 +127,12 @@
     <Compile Include="frmSelectDB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSelectDBComand.Designer.vb">
+      <DependentUpon>frmSelectDBComand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectDBComand.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSix.Designer.vb">
       <DependentUpon>frmSix.vb</DependentUpon>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectDB.resx">
       <DependentUpon>frmSelectDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectDBComand.resx">
+      <DependentUpon>frmSelectDBComand.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSix.resx">
       <DependentUpon>frmSix.vb</DependentUpon>

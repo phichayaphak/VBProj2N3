@@ -27,3 +27,4 @@ D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmMain.resour
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSix.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\bin\Debug\Train61VB2N3.exe.config
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSelectDB.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmSelectDBComand.resources

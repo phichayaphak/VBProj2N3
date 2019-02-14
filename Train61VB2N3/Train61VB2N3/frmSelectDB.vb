@@ -36,7 +36,7 @@ Public Class frmSelectDB
         dgvData.Columns(2).HeaderText = "ราคา"
         dgvData.Columns(3).HeaderText = "คงเหลือ"
         dgvData.Columns(4).HeaderText = "มูลค่า"
-
+        myCon.Close()
     End Sub
 
     Private Sub btnShowSale_Click(sender As Object, e As EventArgs) Handles btnShowSale.Click
@@ -46,5 +46,6 @@ Public Class frmSelectDB
         myDS.Clear()
         myDA.Fill(myDS, "myOrders")
         dgvData.DataSource = myDS.Tables("myOrders")
+        myCon.Close()
     End Sub
 End Class
