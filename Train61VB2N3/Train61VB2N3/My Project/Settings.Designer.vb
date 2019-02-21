@@ -63,6 +63,36 @@ Namespace My
                 Return CType(Me("strCon"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dbSchool;User ID=bisstaff;Password=1234")>  _
+        Public ReadOnly Property myCon2() As String
+            Get
+                Return CType(Me("myCon2"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=NorthWind;User ID=bisqsugar;Password=1234")>  _
+        Public ReadOnly Property myConq() As String
+            Get
+                Return CType(Me("myConq"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dbCompany;User ID=bisstaff;Password=1234")>  _
+        Public ReadOnly Property myConCompany() As String
+            Get
+                Return CType(Me("myConCompany"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

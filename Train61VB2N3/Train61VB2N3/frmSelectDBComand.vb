@@ -3,15 +3,13 @@ Imports System.Data.SqlClient
 Imports System.Configuration
 
 Public Class frmSelectDBComand
-    Dim strCon As String =
-       ConfigurationManager.ConnectionStrings("Train61VB2N3.My.MySettings.strCon").ConnectionString
     Dim myCon As New SqlConnection
-
-    Dim myDA As New SqlDataAdapter
-    Dim myDS As New DataSet
 
     Dim myComm As New SqlCommand
     Dim myDR As SqlDataReader
+
+    Dim myDA As New SqlDataAdapter
+    Dim myDS As New DataSet
 
     Dim strSQL As String
 
@@ -22,12 +20,19 @@ Public Class frmSelectDBComand
         myCon.ConnectionString = strCon
         myCon.Open()
     End Sub
+
     Private Sub frmSelectDBComand_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connetDB()
-        strSQL = "select categoryName From Categories"
+        strSQL = "select categoryName From Categories order by CategoryName "
         myComm = New SqlCommand(strSQL, myCon)
+
+        'myComm = New SqlCommand()
+        'myComm.Connection = myCon
+        'myComm.CommandText = strSQL
+
         myComm.CommandTimeout = 15
         myComm.CommandType = CommandType.Text
+
         myDR = myComm.ExecuteReader()
         '  Dim strName As String
         If myDR.HasRows Then
@@ -48,7 +53,7 @@ Public Class frmSelectDBComand
     Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
         connetDB()
         strSQL = "Select ProductID, ProductName,  UnitPrice, UnitsInStock, (UnitPrice * UnitsInStock) AS Total " & _
-        " From Products, Categories Where Products.CategoryID = Categories.CategoryID and CategoryName =  '" & cmbCategory.SelectedItem & "'    "
+        " From Products, Categories Where Products.CategoryID = Categories.CategoryID and CategoryName =    '" & cmbCategory.SelectedItem & "'   "
 
         myDA = New SqlDataAdapter(strSQL, myCon)
         myDS.Clear()
@@ -90,6 +95,7 @@ Public Class frmSelectDBComand
         lblPrice.Text = myDR.Item("UnitPrice")
         lblUnitsInStock.Text = myDR.Item("UnitsInStock")
         lblReorderlevel.Text = myDR.Item("ReOrderLevel")
+
         If myDR.Item("Discontinued") = False Then
             radSale.Checked = True
         Else
@@ -100,4 +106,7 @@ Public Class frmSelectDBComand
 
     End Sub
 
+    Private Sub dgvData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvData.CellContentClick
+
+    End Sub
 End Class

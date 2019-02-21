@@ -22,12 +22,14 @@ Partial Class frmSelectDBComand
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvData = New System.Windows.Forms.DataGridView()
         Me.gb1 = New System.Windows.Forms.GroupBox()
+        Me.radSale = New System.Windows.Forms.RadioButton()
+        Me.radNoSale = New System.Windows.Forms.RadioButton()
         Me.lblReorderlevel = New System.Windows.Forms.Label()
         Me.lblUnitsInStock = New System.Windows.Forms.Label()
         Me.lblPrice = New System.Windows.Forms.Label()
@@ -40,8 +42,6 @@ Partial Class frmSelectDBComand
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.radNoSale = New System.Windows.Forms.RadioButton()
-        Me.radSale = New System.Windows.Forms.RadioButton()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gb1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,9 +51,9 @@ Partial Class frmSelectDBComand
         Me.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.Location = New System.Drawing.Point(106, 22)
+        Me.cmbCategory.Location = New System.Drawing.Point(146, 22)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(345, 26)
+        Me.cmbCategory.Size = New System.Drawing.Size(305, 26)
         Me.cmbCategory.TabIndex = 0
         '
         'Label1
@@ -71,16 +71,17 @@ Partial Class frmSelectDBComand
         Me.dgvData.AllowUserToDeleteRows = False
         Me.dgvData.AllowUserToResizeColumns = False
         Me.dgvData.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.dgvData.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dgvData.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.Location = New System.Drawing.Point(38, 54)
+        Me.dgvData.Location = New System.Drawing.Point(38, 72)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.ReadOnly = True
         Me.dgvData.RowHeadersVisible = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.dgvData.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Fuchsia
+        Me.dgvData.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvData.Size = New System.Drawing.Size(645, 241)
         Me.dgvData.TabIndex = 2
@@ -101,6 +102,7 @@ Partial Class frmSelectDBComand
         Me.gb1.Controls.Add(Me.Label6)
         Me.gb1.Controls.Add(Me.Label4)
         Me.gb1.Controls.Add(Me.Label2)
+        Me.gb1.Enabled = False
         Me.gb1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gb1.Location = New System.Drawing.Point(38, 339)
         Me.gb1.Name = "gb1"
@@ -108,6 +110,28 @@ Partial Class frmSelectDBComand
         Me.gb1.TabIndex = 3
         Me.gb1.TabStop = False
         Me.gb1.Text = " "
+        '
+        'radSale
+        '
+        Me.radSale.AutoSize = True
+        Me.radSale.Location = New System.Drawing.Point(499, 70)
+        Me.radSale.Name = "radSale"
+        Me.radSale.Size = New System.Drawing.Size(89, 22)
+        Me.radSale.TabIndex = 1
+        Me.radSale.TabStop = True
+        Me.radSale.Text = "ขายอยู่ไหน"
+        Me.radSale.UseVisualStyleBackColor = True
+        '
+        'radNoSale
+        '
+        Me.radNoSale.AutoSize = True
+        Me.radNoSale.Location = New System.Drawing.Point(499, 109)
+        Me.radNoSale.Name = "radNoSale"
+        Me.radNoSale.Size = New System.Drawing.Size(67, 22)
+        Me.radNoSale.TabIndex = 1
+        Me.radNoSale.TabStop = True
+        Me.radNoSale.Text = "เลิกขาย"
+        Me.radNoSale.UseVisualStyleBackColor = True
         '
         'lblReorderlevel
         '
@@ -234,28 +258,6 @@ Partial Class frmSelectDBComand
         Me.Label2.Size = New System.Drawing.Size(100, 23)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "รหัสสินค้า"
-        '
-        'radNoSale
-        '
-        Me.radNoSale.AutoSize = True
-        Me.radNoSale.Location = New System.Drawing.Point(499, 109)
-        Me.radNoSale.Name = "radNoSale"
-        Me.radNoSale.Size = New System.Drawing.Size(67, 22)
-        Me.radNoSale.TabIndex = 1
-        Me.radNoSale.TabStop = True
-        Me.radNoSale.Text = "เลิกขาย"
-        Me.radNoSale.UseVisualStyleBackColor = True
-        '
-        'radSale
-        '
-        Me.radSale.AutoSize = True
-        Me.radSale.Location = New System.Drawing.Point(499, 70)
-        Me.radSale.Name = "radSale"
-        Me.radSale.Size = New System.Drawing.Size(89, 22)
-        Me.radSale.TabIndex = 1
-        Me.radSale.TabStop = True
-        Me.radSale.Text = "ขายอยู่ไหน"
-        Me.radSale.UseVisualStyleBackColor = True
         '
         'frmSelectDBComand
         '

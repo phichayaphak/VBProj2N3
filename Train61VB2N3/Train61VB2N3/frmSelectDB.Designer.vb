@@ -54,14 +54,15 @@ Partial Class frmSelectDB
         Me.dgvData.RowHeadersVisible = False
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Fuchsia
         Me.dgvData.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvData.Size = New System.Drawing.Size(655, 323)
+        Me.dgvData.Size = New System.Drawing.Size(655, 345)
         Me.dgvData.TabIndex = 1
         '
         'btnShowSale
         '
-        Me.btnShowSale.Location = New System.Drawing.Point(152, 36)
+        Me.btnShowSale.Location = New System.Drawing.Point(197, 36)
         Me.btnShowSale.Name = "btnShowSale"
         Me.btnShowSale.Size = New System.Drawing.Size(117, 34)
         Me.btnShowSale.TabIndex = 2
