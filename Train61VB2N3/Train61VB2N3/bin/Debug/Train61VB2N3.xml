@@ -15,7 +15,27 @@ Train61VB2N3
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources._exit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources._new1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Train61VB2N3.My.Resources.Resources.banner_hardware">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources.cancel">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources.delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources.edit">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -24,6 +44,10 @@ Train61VB2N3
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Train61VB2N3.My.Resources.Resources.mainpicture">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Train61VB2N3.My.Resources.Resources.save">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

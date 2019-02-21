@@ -67,11 +67,25 @@ Public Class frmDB_Mng
         myDA.Fill(myDS, "dtEmployee")
         dgvData.DataSource = myDS.Tables("dtEmployee")
 
-        dgvData.Columns(0).Width = 50
+        dgvData.Columns(0).Width = 80
+        dgvData.Columns(1).Width = 120
+        dgvData.Columns(2).Width = 120
+        dgvData.Columns(3).Width = 180
+        dgvData.Columns(4).Width = 50
+        dgvData.Columns(5).Width = 75
         dgvData.Columns(6).Width = 100
 
         dgvData.Columns(0).HeaderText = "รหัส"
+        dgvData.Columns(1).HeaderText = "ชื่อ"
+        dgvData.Columns(2).HeaderText = "สกุล"
+        dgvData.Columns(3).HeaderText = "ที่อยู่"
+        dgvData.Columns(4).HeaderText = "เพศ"
+        dgvData.Columns(5).HeaderText = "เงินเดือน"
         dgvData.Columns(6).HeaderText = "ตำแหน่ง"
+
+        dgvData.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        dgvData.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
         If dgvData.RowCount = 0 Then
             btnUpdate.Enabled = False
             btnDelete.Enabled = False

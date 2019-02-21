@@ -48,6 +48,7 @@ Partial Class frmDB_Mng
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.gbShow = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbData.SuspendLayout()
         Me.gbShow.SuspendLayout()
@@ -61,11 +62,11 @@ Partial Class frmDB_Mng
         Me.dgvData.AllowUserToResizeColumns = False
         Me.dgvData.AllowUserToResizeRows = False
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.Location = New System.Drawing.Point(50, 44)
+        Me.dgvData.Location = New System.Drawing.Point(12, 48)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.RowHeadersVisible = False
         Me.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvData.Size = New System.Drawing.Size(662, 209)
+        Me.dgvData.Size = New System.Drawing.Size(728, 235)
         Me.dgvData.TabIndex = 0
         '
         'gbData
@@ -89,7 +90,7 @@ Partial Class frmDB_Mng
         Me.gbData.Controls.Add(Me.Label3)
         Me.gbData.Controls.Add(Me.Label2)
         Me.gbData.Enabled = False
-        Me.gbData.Location = New System.Drawing.Point(81, 307)
+        Me.gbData.Location = New System.Drawing.Point(81, 352)
         Me.gbData.Name = "gbData"
         Me.gbData.Size = New System.Drawing.Size(756, 161)
         Me.gbData.TabIndex = 1
@@ -98,20 +99,24 @@ Partial Class frmDB_Mng
         '
         'btnCancel
         '
+        Me.btnCancel.Image = Global.Train61VB2N3.My.Resources.Resources.cancel
         Me.btnCancel.Location = New System.Drawing.Point(572, 90)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(80, 30)
+        Me.btnCancel.Size = New System.Drawing.Size(85, 52)
         Me.btnCancel.TabIndex = 4
         Me.btnCancel.Text = "ยกเลิก"
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(466, 90)
+        Me.btnSave.Image = Global.Train61VB2N3.My.Resources.Resources.save
+        Me.btnSave.Location = New System.Drawing.Point(486, 91)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(80, 30)
+        Me.btnSave.Size = New System.Drawing.Size(80, 52)
         Me.btnSave.TabIndex = 4
         Me.btnSave.Text = "บันทึก"
+        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'radFemale
@@ -241,53 +246,61 @@ Partial Class frmDB_Mng
         '
         Me.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbDepartment.FormattingEnabled = True
-        Me.cmbDepartment.Location = New System.Drawing.Point(112, 19)
+        Me.cmbDepartment.Location = New System.Drawing.Point(100, 19)
         Me.cmbDepartment.Name = "cmbDepartment"
         Me.cmbDepartment.Size = New System.Drawing.Size(337, 21)
         Me.cmbDepartment.TabIndex = 2
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(51, 19)
+        Me.Label1.Location = New System.Drawing.Point(27, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 23)
+        Me.Label1.Size = New System.Drawing.Size(70, 23)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "แผนก"
         '
         'btnInsert
         '
-        Me.btnInsert.Location = New System.Drawing.Point(284, 474)
+        Me.btnInsert.Image = Global.Train61VB2N3.My.Resources.Resources._new1
+        Me.btnInsert.Location = New System.Drawing.Point(258, 519)
         Me.btnInsert.Name = "btnInsert"
-        Me.btnInsert.Size = New System.Drawing.Size(80, 30)
+        Me.btnInsert.Size = New System.Drawing.Size(98, 48)
         Me.btnInsert.TabIndex = 4
         Me.btnInsert.Text = "เพิ่ม"
+        Me.btnInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnInsert.UseVisualStyleBackColor = True
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(375, 474)
+        Me.btnUpdate.Image = Global.Train61VB2N3.My.Resources.Resources.edit
+        Me.btnUpdate.Location = New System.Drawing.Point(359, 519)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(80, 30)
+        Me.btnUpdate.Size = New System.Drawing.Size(98, 48)
         Me.btnUpdate.TabIndex = 4
         Me.btnUpdate.Text = "แก้ไข"
+        Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(461, 474)
+        Me.btnDelete.Image = Global.Train61VB2N3.My.Resources.Resources.delete
+        Me.btnDelete.Location = New System.Drawing.Point(463, 519)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(80, 30)
+        Me.btnDelete.Size = New System.Drawing.Size(98, 48)
         Me.btnDelete.TabIndex = 4
         Me.btnDelete.Text = "ลบ"
+        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(547, 474)
+        Me.btnExit.Image = Global.Train61VB2N3.My.Resources.Resources._exit
+        Me.btnExit.Location = New System.Drawing.Point(567, 519)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(80, 30)
+        Me.btnExit.Size = New System.Drawing.Size(98, 48)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "ออก"
+        Me.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'gbShow
@@ -296,19 +309,30 @@ Partial Class frmDB_Mng
         Me.gbShow.Controls.Add(Me.dgvData)
         Me.gbShow.Controls.Add(Me.Label1)
         Me.gbShow.Controls.Add(Me.cmbDepartment)
-        Me.gbShow.Location = New System.Drawing.Point(81, 25)
+        Me.gbShow.Location = New System.Drawing.Point(81, 47)
         Me.gbShow.Name = "gbShow"
-        Me.gbShow.Size = New System.Drawing.Size(756, 265)
+        Me.gbShow.Size = New System.Drawing.Size(756, 299)
         Me.gbShow.TabIndex = 5
         Me.gbShow.TabStop = False
         Me.gbShow.Text = " "
+        '
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(77, 21)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(756, 23)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "โปรแกรมจัดการฐานข้อมูลบุคลากร"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmDB_Mng
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 534)
+        Me.ClientSize = New System.Drawing.Size(911, 600)
         Me.Controls.Add(Me.gbShow)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
@@ -349,4 +373,5 @@ Partial Class frmDB_Mng
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents gbShow As System.Windows.Forms.GroupBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

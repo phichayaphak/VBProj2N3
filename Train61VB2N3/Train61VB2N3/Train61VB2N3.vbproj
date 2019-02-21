@@ -210,9 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +235,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="banner_hardware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
