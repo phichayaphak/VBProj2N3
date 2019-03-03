@@ -13,6 +13,7 @@ Public Class frmDB_Mng
 
     Dim myComm As New SqlCommand
     Dim myDR As SqlDataReader
+
     Dim userAct As String
     Dim oldEmpID As String
 
@@ -23,6 +24,7 @@ Public Class frmDB_Mng
         myCon.ConnectionString = strCon
         myCon.Open()
     End Sub
+
     Private Sub frmDB_Mng_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connectDB()
         strSQL = "select * from Department"
@@ -35,11 +37,12 @@ Public Class frmDB_Mng
                 cmbDepartment.Items.Add(myDR.Item("depName"))
             End While
             cmbDepartment.SelectedIndex = 0
+            myDR.Close()
         Else
             MessageBox.Show("ยังไม่มีข้อมูลแผนกงานในระบบ ไม่สามารถจัดการข้อมูลพนักงานได้" & Chr(10) & "กรุณาดำเนินการในส่วนการจัดการแผนกก่อน", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            myDR.Close()
             Me.Close()
         End If
-        myDR.Close()
 
         strSQL = "select * from Status"
         myComm = New SqlCommand(strSQL, myCon)
@@ -51,11 +54,13 @@ Public Class frmDB_Mng
                 cmbStatus.Items.Add(myDR.Item("staName"))
             End While
             cmbStatus.SelectedIndex = 0
+            myDR.Close()
         Else
             MessageBox.Show("ยังไม่มีข้อมูลตำแหน่งในระบบ ไม่สามารถจัดการข้อมูลพนักงานได้" & Chr(10) & "กรุณาดำเนินการในส่วนการจัดการตำแหน่งก่อน", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            myDR.Close()
             Me.Close()
         End If
-        myDR.Close()
+
         myCon.Close()
     End Sub
 
@@ -93,7 +98,6 @@ Public Class frmDB_Mng
     End Sub
 
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
-
         gbShow.Enabled = False
         gbData.Enabled = True
         txtEmpId.Clear()
@@ -158,6 +162,7 @@ Public Class frmDB_Mng
             staID = myDR.Item("staID")
             myDR.Close()
 
+
             If userAct = "insert" Then 'เพิ่ม
                 'เช็ค PK
                 strSQL = "select empID from Employee where empID = @eid "
@@ -167,10 +172,11 @@ Public Class frmDB_Mng
                 myComm.Parameters.AddWithValue("eid", txtEmpId.Text)
                 myDR = myComm.ExecuteReader
                 If myDR.HasRows Then
-                    MessageBox.Show("รหัสพนักที่ท่านป้อน ซ้ำกับที่มีอยู่แล้วในระบบ" & Chr(10) & "กรุณาตรวจสอบและแก้ไขให้ถูกต้อง", "รหัสพนักงานซ้ำ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("รหัสพนักงานที่ท่านป้อน ซ้ำกับที่มีอยู่แล้วในระบบ" & Chr(10) & "กรุณาตรวจสอบและแก้ไขให้ถูกต้อง", "รหัสพนักงานซ้ำ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     myDR.Close()
                     Exit Sub
                 End If
+
                 myDR.Close()
                 strSQL = "Insert into Employee(empID, empName, empSurname, empAddress, empGender, empSalary, depID, staID) " & _
                     " Values(@eid, @ename, @esurname, @eadd, @egen, @esalary, @depid, @staid)  "
@@ -205,6 +211,7 @@ Public Class frmDB_Mng
                     End If
                     myDR.Close()
                 End If
+
                 strSQL = "Update Employee Set empID = @eid, empName=@ename, empSurname=@esurname, empAddress=@eadd, empGender=@egen,empSalary=@esalary, depID=@depid, staID=@staid " & _
                     " where empID = @eoid"
                 myComm = New SqlCommand(strSQL, myCon)
@@ -251,6 +258,7 @@ Public Class frmDB_Mng
         If dgvData.RowCount = 0 Or dgvData.SelectedRows.Count = 0 Then
             Exit Sub
         End If
+
         Dim r As Integer = dgvData.CurrentCell.RowIndex
         Dim eid As String = dgvData.Item(0, r).Value
 
@@ -275,12 +283,15 @@ Public Class frmDB_Mng
         Else
             radFemale.Checked = True
         End If
-        For i = 0 To cmbStatus.Items.Count - 1
-            If cmbStatus.Items(i) = myDR.Item("staName") Then
-                cmbStatus.SelectedIndex = i
-                Exit For
-            End If
-        Next
+
+        cmbStatus.SelectedItem = myDR.Item("staName")
+
+        'For i = 0 To cmbStatus.Items.Count - 1
+        'If cmbStatus.Items(i) = myDR.Item("staName") Then
+        'cmbStatus.SelectedIndex = i
+        'Exit For
+        'End If
+        'Next
         myDR.Close()
     End Sub
 

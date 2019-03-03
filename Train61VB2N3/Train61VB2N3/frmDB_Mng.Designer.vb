@@ -248,7 +248,7 @@ Partial Class frmDB_Mng
         Me.cmbDepartment.FormattingEnabled = True
         Me.cmbDepartment.Location = New System.Drawing.Point(100, 19)
         Me.cmbDepartment.Name = "cmbDepartment"
-        Me.cmbDepartment.Size = New System.Drawing.Size(337, 21)
+        Me.cmbDepartment.Size = New System.Drawing.Size(257, 21)
         Me.cmbDepartment.TabIndex = 2
         '
         'Label1
