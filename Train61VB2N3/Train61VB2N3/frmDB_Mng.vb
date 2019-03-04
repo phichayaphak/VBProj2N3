@@ -27,7 +27,7 @@ Public Class frmDB_Mng
 
     Private Sub frmDB_Mng_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         connectDB()
-        strSQL = "select * from Department"
+        strSQL = "select depName from Department"
         myComm = New SqlCommand(strSQL, myCon)
         myComm.CommandTimeout = 15
         myComm.CommandType = CommandType.Text
@@ -270,7 +270,7 @@ Public Class frmDB_Mng
         myComm = New SqlCommand(strSQL, myCon)
         myComm.CommandType = CommandType.Text
         myComm.CommandTimeout = 15
-        myComm.Parameters.AddWithValue("eid", eid)
+        myComm.Parameters.AddWithValue("@eid", eid)
         myDR = myComm.ExecuteReader
         myDR.Read()
         txtEmpId.Text = myDR.Item("empID")
