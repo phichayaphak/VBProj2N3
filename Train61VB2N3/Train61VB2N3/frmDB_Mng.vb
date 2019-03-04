@@ -126,7 +126,7 @@ Public Class frmDB_Mng
             txtEmpId.Focus()
             Exit Sub
         ElseIf Not IsNumeric(txtEmpSalary.Text) Then
-            MessageBox.Show("ท่านป้อนข้อมูลเงินเดือนไม่สมบูรณ์" & Chr(10) & "กรุณาตรวจสอบและแก้ไขให้ถูกต้อง", "ข้อมูลไม่สมบูรณ์", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("ท่านป้อนข้อมูลเงินเดือนไม่ถูกต้อง" & Chr(10) & "กรุณาตรวจสอบและแก้ไขให้ถูกต้อง", "ข้อมูลไม่สมบูรณ์", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtEmpSalary.Focus()
             Exit Sub
         Else
@@ -272,6 +272,7 @@ Public Class frmDB_Mng
         myComm.CommandTimeout = 15
         myComm.Parameters.AddWithValue("@eid", eid)
         myDR = myComm.ExecuteReader
+
         myDR.Read()
         txtEmpId.Text = myDR.Item("empID")
         txtEmpName.Text = myDR.Item("empName")

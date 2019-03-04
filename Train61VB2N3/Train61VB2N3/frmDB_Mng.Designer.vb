@@ -330,7 +330,7 @@ Partial Class frmDB_Mng
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 600)
+        Me.ClientSize = New System.Drawing.Size(909, 600)
         Me.Controls.Add(Me.gbShow)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnExit)
