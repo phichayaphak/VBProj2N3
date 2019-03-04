@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 
 Public Class frmSelectDB
     Dim strCon As String =
-        ConfigurationManager.ConnectionStrings("Train61VB2N3.My.MySettings.myConq").ConnectionString
+        ConfigurationManager.ConnectionStrings("Train61VB2N3.My.MySettings.strCon").ConnectionString
     Dim myCon As New SqlConnection()
     Dim myDA As New SqlDataAdapter
     Dim myDS As New DataSet
@@ -42,7 +42,7 @@ Public Class frmSelectDB
 
     Private Sub btnShowSale_Click(sender As Object, e As EventArgs) Handles btnShowSale.Click
         connetDB()
-        strSQL = "Select OrderID, OrderDate, Customers.CustomerID, CompanyName, FirstName, Lastname From Orders, Customers, Employees Where Orders.CustomerID = Customers.CustomerID and Orders.EmployeeID = Employees.EmployeeID and customers.city = 'Berlin' "
+        strSQL = "Select OrderID, OrderDate, Customers.CustomerID, CompanyName, Employees.EmployeeID, FirstName, Lastname From Orders, Customers, Employees Where Orders.CustomerID = Customers.CustomerID and Orders.EmployeeID = Employees.EmployeeID and customers.city = 'Berlin' "
         myDA = New SqlDataAdapter(strSQL, myCon)
         myDS.Clear()
         myDA.Fill(myDS, "myOrders")

@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=NorthWind;User ID=bisstaff;Password=1234")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=172.25.200.169;Initial Catalog=NorthWind;User ID=bisstaff;Password=12"& _ 
+            "34")>  _
         Public ReadOnly Property strCon() As String
             Get
                 Return CType(Me("strCon"),String)
