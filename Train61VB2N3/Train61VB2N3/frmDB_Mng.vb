@@ -105,6 +105,7 @@ Public Class frmDB_Mng
         txtEmpSurname.Clear()
         txtEmpAddress.Clear()
         txtEmpSalary.Clear()
+        txtEmpPassword.Clear()
         radMale.Checked = True
         cmbStatus.SelectedIndex = 0
         txtEmpId.Focus()
@@ -178,8 +179,8 @@ Public Class frmDB_Mng
                 End If
 
                 myDR.Close()
-                strSQL = "Insert into Employee(empID, empName, empSurname, empAddress, empGender, empSalary, depID, staID) " & _
-                    " Values(@eid, @ename, @esurname, @eadd, @egen, @esalary, @depid, @staid)  "
+                strSQL = "Insert into Employee(empID, empName, empSurname, empAddress, empGender, empSalary, empPassword, depID, staID) " & _
+                    " Values(@eid, @ename, @esurname, @eadd, @egen, @esalary, @ePassword, @depid, @staid)  "
                 myComm = New SqlCommand(strSQL, myCon)
                 myComm.CommandType = CommandType.Text
                 myComm.CommandTimeout = 15
@@ -189,6 +190,7 @@ Public Class frmDB_Mng
                 myComm.Parameters.AddWithValue("eadd", txtEmpAddress.Text)
                 myComm.Parameters.AddWithValue("egen", gender)
                 myComm.Parameters.AddWithValue("esalary", txtEmpSalary.Text)
+                myComm.Parameters.AddWithValue("epassword", txtEmpPassword.Text)
                 myComm.Parameters.AddWithValue("depid", depID)
                 myComm.Parameters.AddWithValue("staid", staID)
                 myComm.ExecuteNonQuery()
@@ -212,7 +214,7 @@ Public Class frmDB_Mng
                     myDR.Close()
                 End If
 
-                strSQL = "Update Employee Set empID = @eid, empName=@ename, empSurname=@esurname, empAddress=@eadd, empGender=@egen,empSalary=@esalary, depID=@depid, staID=@staid " & _
+                strSQL = "Update Employee Set empID = @eid, empName=@ename, empSurname=@esurname, empAddress=@eadd, empGender=@egen,empSalary=@esalary, empPassword=@epassword, depID=@depid, staID=@staid " & _
                     " where empID = @eoid"
                 myComm = New SqlCommand(strSQL, myCon)
                 myComm.CommandType = CommandType.Text
@@ -223,6 +225,7 @@ Public Class frmDB_Mng
                 myComm.Parameters.AddWithValue("eadd", txtEmpAddress.Text)
                 myComm.Parameters.AddWithValue("egen", gender)
                 myComm.Parameters.AddWithValue("esalary", txtEmpSalary.Text)
+                myComm.Parameters.AddWithValue("epassword", txtEmpPassword.Text)
                 myComm.Parameters.AddWithValue("depid", depID)
                 myComm.Parameters.AddWithValue("staid", staID)
                 myComm.Parameters.AddWithValue("eoid", oldEmpID)
@@ -279,6 +282,7 @@ Public Class frmDB_Mng
         txtEmpSurname.Text = myDR.Item("empSurname")
         txtEmpAddress.Text = myDR.Item("empAddress")
         txtEmpSalary.Text = myDR.Item("empSalary")
+        txtEmpPassword.Text = myDR.Item("empPassword")
         If myDR.Item("empGender") = True Then
             radMale.Checked = True
         Else

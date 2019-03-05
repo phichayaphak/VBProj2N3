@@ -49,6 +49,8 @@ Partial Class frmDB_Mng
         Me.btnExit = New System.Windows.Forms.Button()
         Me.gbShow = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtEmpPassword = New System.Windows.Forms.TextBox()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbData.SuspendLayout()
         Me.gbShow.SuspendLayout()
@@ -81,8 +83,10 @@ Partial Class frmDB_Mng
         Me.gbData.Controls.Add(Me.txtEmpSalary)
         Me.gbData.Controls.Add(Me.txtEmpAddress)
         Me.gbData.Controls.Add(Me.txtEmpName)
+        Me.gbData.Controls.Add(Me.txtEmpPassword)
         Me.gbData.Controls.Add(Me.txtEmpId)
         Me.gbData.Controls.Add(Me.Label7)
+        Me.gbData.Controls.Add(Me.Label10)
         Me.gbData.Controls.Add(Me.Label6)
         Me.gbData.Controls.Add(Me.Label5)
         Me.gbData.Controls.Add(Me.Label4)
@@ -326,6 +330,22 @@ Partial Class frmDB_Mng
         Me.Label9.Text = "โปรแกรมจัดการฐานข้อมูลบุคลากร"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label10
+        '
+        Me.Label10.Location = New System.Drawing.Point(6, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(88, 23)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "รหัสผ่าน"
+        '
+        'txtEmpPassword
+        '
+        Me.txtEmpPassword.Location = New System.Drawing.Point(74, 76)
+        Me.txtEmpPassword.Name = "txtEmpPassword"
+        Me.txtEmpPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtEmpPassword.Size = New System.Drawing.Size(123, 20)
+        Me.txtEmpPassword.TabIndex = 4
+        '
         'frmDB_Mng
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -374,4 +394,6 @@ Partial Class frmDB_Mng
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents gbShow As System.Windows.Forms.GroupBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtEmpPassword As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class
