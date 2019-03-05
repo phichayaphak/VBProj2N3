@@ -248,7 +248,7 @@ Partial Class frmDB_Mng
         Me.cmbDepartment.FormattingEnabled = True
         Me.cmbDepartment.Location = New System.Drawing.Point(100, 19)
         Me.cmbDepartment.Name = "cmbDepartment"
-        Me.cmbDepartment.Size = New System.Drawing.Size(337, 21)
+        Me.cmbDepartment.Size = New System.Drawing.Size(257, 21)
         Me.cmbDepartment.TabIndex = 2
         '
         'Label1
@@ -330,7 +330,7 @@ Partial Class frmDB_Mng
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 600)
+        Me.ClientSize = New System.Drawing.Size(909, 600)
         Me.Controls.Add(Me.gbShow)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnExit)

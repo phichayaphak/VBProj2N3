@@ -145,6 +145,12 @@
     <Compile Include="frmSix.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmStatus.Designer.vb">
+      <DependentUpon>frmStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmThird.Designer.vb">
       <DependentUpon>frmThird.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,9 @@
     <EmbeddedResource Include="frmSix.resx">
       <DependentUpon>frmSix.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmStatus.resx">
+      <DependentUpon>frmStatus.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThird.resx">
       <DependentUpon>frmThird.vb</DependentUpon>
     </EmbeddedResource>
@@ -235,18 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="banner_hardware.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cancel.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="delete.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="edit.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="new.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="save.ico" />
