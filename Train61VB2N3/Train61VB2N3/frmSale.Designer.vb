@@ -34,10 +34,16 @@ Partial Class frmSale
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbDetail = New System.Windows.Forms.GroupBox()
         Me.dgvSale = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblNet = New System.Windows.Forms.Label()
         Me.lblDiscount = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblSaleTotal = New System.Windows.Forms.Label()
+        Me.btnFind = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.txtSaleAmount = New System.Windows.Forms.TextBox()
         Me.txtProID = New System.Windows.Forms.TextBox()
@@ -51,11 +57,6 @@ Partial Class frmSale
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblProPrice = New System.Windows.Forms.Label()
         Me.lblProName = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbHead.SuspendLayout()
         Me.gbDetail.SuspendLayout()
         CType(Me.dgvSale, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,6 +166,7 @@ Partial Class frmSale
         Me.gbDetail.Controls.Add(Me.lblDiscount)
         Me.gbDetail.Controls.Add(Me.lblTotal)
         Me.gbDetail.Controls.Add(Me.lblSaleTotal)
+        Me.gbDetail.Controls.Add(Me.btnFind)
         Me.gbDetail.Controls.Add(Me.btnAdd)
         Me.gbDetail.Controls.Add(Me.txtSaleAmount)
         Me.gbDetail.Controls.Add(Me.txtProID)
@@ -195,11 +197,45 @@ Partial Class frmSale
         Me.dgvSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSale.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.dgvSale.Location = New System.Drawing.Point(12, 92)
+        Me.dgvSale.MultiSelect = False
         Me.dgvSale.Name = "dgvSale"
         Me.dgvSale.ReadOnly = True
         Me.dgvSale.RowHeadersVisible = False
         Me.dgvSale.Size = New System.Drawing.Size(819, 187)
         Me.dgvSale.TabIndex = 2
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "รหัส"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ชื่อ"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 300
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "ราคา"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 150
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "จำนวน"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "เป็นเงิน"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 200
         '
         'lblNet
         '
@@ -212,6 +248,7 @@ Partial Class frmSale
         Me.lblNet.Size = New System.Drawing.Size(215, 42)
         Me.lblNet.TabIndex = 0
         Me.lblNet.Text = " "
+        Me.lblNet.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblDiscount
         '
@@ -224,6 +261,7 @@ Partial Class frmSale
         Me.lblDiscount.Size = New System.Drawing.Size(215, 42)
         Me.lblDiscount.TabIndex = 0
         Me.lblDiscount.Text = " "
+        Me.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblTotal
         '
@@ -236,6 +274,7 @@ Partial Class frmSale
         Me.lblTotal.Size = New System.Drawing.Size(215, 42)
         Me.lblTotal.TabIndex = 0
         Me.lblTotal.Text = " "
+        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblSaleTotal
         '
@@ -245,6 +284,15 @@ Partial Class frmSale
         Me.lblSaleTotal.Size = New System.Drawing.Size(113, 23)
         Me.lblSaleTotal.TabIndex = 0
         Me.lblSaleTotal.Text = " "
+        '
+        'btnFind
+        '
+        Me.btnFind.Location = New System.Drawing.Point(118, 54)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(28, 26)
+        Me.btnFind.TabIndex = 1
+        Me.btnFind.Text = "..."
+        Me.btnFind.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
@@ -357,39 +405,6 @@ Partial Class frmSale
         Me.lblProName.TabIndex = 0
         Me.lblProName.Text = " "
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "รหัส"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ชื่อ"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 300
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "ราคา"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 150
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "จำนวน"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "เป็นเงิน"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 200
-        '
         'frmSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -441,4 +456,5 @@ Partial Class frmSale
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnFind As System.Windows.Forms.Button
 End Class
