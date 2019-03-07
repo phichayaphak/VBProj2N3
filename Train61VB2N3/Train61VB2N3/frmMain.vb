@@ -22,8 +22,9 @@
         Dim frmLogin As New LoginForm1
         empID = ""
         frmLogin.ShowDialog()
+
         If empID = "" Then
-            Me.Close()
+            End
         Else
             Select Case staName
                 Case "พนักงานขาย"

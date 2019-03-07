@@ -22,6 +22,7 @@ Public Class frmProductList
         myDS.Clear()
         myDA.Fill(myDS, "myPro")
         dgvProduct.DataSource = myDS.Tables("myPro")
+
     End Sub
 
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click

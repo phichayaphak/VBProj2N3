@@ -60,7 +60,7 @@ Public Class frmStatus
     Private Function getNewID() As String
         Dim newID As String
         Dim lastID As String
-
+        'sxxxx
         connectDB()
         strSQL = "select max(staID) as maxID  from Status"
         myComm = New SqlCommand(strSQL, myCon)
@@ -68,17 +68,23 @@ Public Class frmStatus
         myComm.CommandTimeout = 15
         myDR = myComm.ExecuteReader
         myDR.Read()
-        lastID = myDR.Item("maxID")
-        myDR.Close()
+        If IsDBNull(myDR.Item("maxID")) Then
+            newID = "s0001"
+            myDR.Close()
+        Else
+            lastID = myDR.Item("maxID")
+            myDR.Close()
 
-        lastID = Mid(lastID, 2)
-        newID = Val(lastID) + 1
-        Select Case newID.Length
-            Case 1 : newID = "000" & newID
-            Case 2 : newID = "00" & newID
-            Case 3 : newID = "0" & newID
-        End Select
-        newID = "s" & newID
+            lastID = Mid(lastID, 2)
+            newID = Val(lastID) + 1
+            Select Case newID.Length
+                Case 1 : newID = "000" & newID
+                Case 2 : newID = "00" & newID
+                Case 3 : newID = "0" & newID
+            End Select
+            newID = "s" & newID
+        End If
+
         myCon.Close()
         Return newID
     End Function

@@ -57,6 +57,7 @@ Partial Class frmSale
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblProPrice = New System.Windows.Forms.Label()
         Me.lblProName = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.gbHead.SuspendLayout()
         Me.gbDetail.SuspendLayout()
         CType(Me.dgvSale, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +65,7 @@ Partial Class frmSale
         '
         'gbHead
         '
+        Me.gbHead.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.gbHead.Controls.Add(Me.btnPrint)
         Me.gbHead.Controls.Add(Me.btnExit)
         Me.gbHead.Controls.Add(Me.btnSale)
@@ -73,9 +75,10 @@ Partial Class frmSale
         Me.gbHead.Controls.Add(Me.Label3)
         Me.gbHead.Controls.Add(Me.lblSaleID)
         Me.gbHead.Controls.Add(Me.Label1)
+        Me.gbHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbHead.Location = New System.Drawing.Point(29, 46)
         Me.gbHead.Name = "gbHead"
-        Me.gbHead.Size = New System.Drawing.Size(925, 127)
+        Me.gbHead.Size = New System.Drawing.Size(846, 127)
         Me.gbHead.TabIndex = 0
         Me.gbHead.TabStop = False
         Me.gbHead.Text = "GroupBox1"
@@ -83,16 +86,16 @@ Partial Class frmSale
         'btnPrint
         '
         Me.btnPrint.Enabled = False
-        Me.btnPrint.Location = New System.Drawing.Point(616, 70)
+        Me.btnPrint.Location = New System.Drawing.Point(565, 72)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(128, 37)
+        Me.btnPrint.Size = New System.Drawing.Size(112, 37)
         Me.btnPrint.TabIndex = 1
         Me.btnPrint.Text = "พิมพ์ใบเสร็จรับเงิน"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(780, 16)
+        Me.btnExit.Location = New System.Drawing.Point(692, 18)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(128, 37)
         Me.btnExit.TabIndex = 1
@@ -101,9 +104,9 @@ Partial Class frmSale
         '
         'btnSale
         '
-        Me.btnSale.Location = New System.Drawing.Point(616, 16)
+        Me.btnSale.Location = New System.Drawing.Point(565, 18)
         Me.btnSale.Name = "btnSale"
-        Me.btnSale.Size = New System.Drawing.Size(128, 37)
+        Me.btnSale.Size = New System.Drawing.Size(112, 37)
         Me.btnSale.TabIndex = 1
         Me.btnSale.Text = "เปิดบิลขาย"
         Me.btnSale.UseVisualStyleBackColor = True
@@ -113,7 +116,7 @@ Partial Class frmSale
         Me.lblEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblEmployee.Location = New System.Drawing.Point(171, 70)
         Me.lblEmployee.Name = "lblEmployee"
-        Me.lblEmployee.Size = New System.Drawing.Size(402, 39)
+        Me.lblEmployee.Size = New System.Drawing.Size(388, 39)
         Me.lblEmployee.TabIndex = 0
         Me.lblEmployee.Text = " "
         '
@@ -128,7 +131,7 @@ Partial Class frmSale
         'lblSaleDate
         '
         Me.lblSaleDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblSaleDate.Location = New System.Drawing.Point(422, 16)
+        Me.lblSaleDate.Location = New System.Drawing.Point(408, 16)
         Me.lblSaleDate.Name = "lblSaleDate"
         Me.lblSaleDate.Size = New System.Drawing.Size(151, 39)
         Me.lblSaleDate.TabIndex = 0
@@ -136,7 +139,7 @@ Partial Class frmSale
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(357, 32)
+        Me.Label3.Location = New System.Drawing.Point(343, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(140, 23)
         Me.Label3.TabIndex = 0
@@ -161,6 +164,8 @@ Partial Class frmSale
         '
         'gbDetail
         '
+        Me.gbDetail.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.gbDetail.Controls.Add(Me.btnDelete)
         Me.gbDetail.Controls.Add(Me.dgvSale)
         Me.gbDetail.Controls.Add(Me.lblNet)
         Me.gbDetail.Controls.Add(Me.lblDiscount)
@@ -201,6 +206,7 @@ Partial Class frmSale
         Me.dgvSale.Name = "dgvSale"
         Me.dgvSale.ReadOnly = True
         Me.dgvSale.RowHeadersVisible = False
+        Me.dgvSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSale.Size = New System.Drawing.Size(819, 187)
         Me.dgvSale.TabIndex = 2
         '
@@ -405,6 +411,15 @@ Partial Class frmSale
         Me.lblProName.TabIndex = 0
         Me.lblProName.Text = " "
         '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(582, 285)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(24, 26)
+        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.Text = "X"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
         'frmSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -451,10 +466,11 @@ Partial Class frmSale
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnFind As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnFind As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
 End Class

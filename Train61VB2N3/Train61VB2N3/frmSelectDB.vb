@@ -53,4 +53,8 @@ Public Class frmSelectDB
     Private Sub frmSelectDB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub dgvData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvData.CellContentClick
+
+    End Sub
 End Class

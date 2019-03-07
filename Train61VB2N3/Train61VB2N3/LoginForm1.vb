@@ -10,7 +10,6 @@ Public Class LoginForm1
     Dim myComm As New SqlCommand
     Dim myDR As SqlDataReader
 
-
     Private Sub connectDB()
         If myCon.State = ConnectionState.Open Then
             myCon.Close()

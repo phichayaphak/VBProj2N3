@@ -29,6 +29,7 @@ Public Class frmSale
     Private Sub frmSale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
     Private Function getNewBill() As String
         Dim newBillID As String = ""
         Dim lastBillID As String
@@ -43,8 +44,11 @@ Public Class frmSale
         myDR.Read()
         
         If Not IsDBNull(myDR.Item("maxSale")) Then
+            'B2562/0000009
             lastBillID = myDR.Item("maxSale")
             lastBillID = Mid(lastBillID, 7)
+            'lastBillID = lastBillID.Substring(6)
+
             newBillID = Val(lastBillID) + 1
             Select Case newBillID.Length
                 Case 1 : newBillID = "000000" & newBillID
@@ -75,7 +79,7 @@ Public Class frmSale
             gbDetail.Enabled = True
         Else 'บันทึก
             If dgvSale.RowCount = 0 Then
-                MessageBox.Show("ท่านไม่ได้รายการขายสินค้าใดๆ ไม่สามารถบันทึกได้", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("ท่านไม่ได้ระบุรายการขายสินค้าใดๆ ไม่สามารถบันทึกได้", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Exit Sub
             End If
             connectDB()
@@ -188,6 +192,7 @@ Public Class frmSale
         For i = 0 To dgvSale.RowCount - 1
             total = total + Val(dgvSale.Item(4, i).Value)
         Next
+
         If total < 1000 Then
             discount = 0
         ElseIf total < 50000 Then
@@ -204,6 +209,31 @@ Public Class frmSale
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim found As Boolean = False
         Dim total As Double
+        Dim sumAmount As Integer = Val(txtSaleAmount.Text)
+        Dim proNet As Integer
+
+        For i = 0 To dgvSale.RowCount - 1
+            If txtProID.Text = dgvSale.Item(0, i).Value Then
+                sumAmount = Val(dgvSale.Item(3, i).Value) + sumAmount
+                Exit For
+            End If
+        Next
+        connectDB()
+        strSQL = "select proNet from Product where proID = @pid"
+        myComm = New SqlCommand(strSQL, myCon)
+        myComm.CommandTimeout = 15
+        myComm.CommandType = CommandType.Text
+        myComm.Parameters.AddWithValue("pid", txtProID.Text)
+        myDR = myComm.ExecuteReader
+        myDR.Read()
+        proNet = Val(myDR.Item("proNet"))
+        myDR.Close()
+        If sumAmount > proNet Then
+            MessageBox.Show("สินค้าคงเหลือไม่เพียงพอต่อจำนวนขายที่ระบุ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtSaleAmount.Focus()
+            Exit Sub
+        End If
+
         For i = 0 To dgvSale.RowCount - 1
             If txtProID.Text = dgvSale.Item(0, i).Value Then
                 dgvSale.Item(3, i).Value = Val(dgvSale.Item(3, i).Value) + Val(txtSaleAmount.Text)
@@ -217,12 +247,12 @@ Public Class frmSale
         If found = False Then
             Dim n As Integer
             dgvSale.Rows.Add()
-            n = dgvSale.Rows.Count
-            dgvSale.Item(0, n - 1).Value = txtProID.Text
-            dgvSale.Item(1, n - 1).Value = lblProName.Text
-            dgvSale.Item(2, n - 1).Value = lblProPrice.Text
-            dgvSale.Item(3, n - 1).Value = txtSaleAmount.Text
-            dgvSale.Item(4, n - 1).Value = lblSaleTotal.Text
+            n = dgvSale.Rows.Count - 1
+            dgvSale.Item(0, n).Value = txtProID.Text
+            dgvSale.Item(1, n).Value = lblProName.Text
+            dgvSale.Item(2, n).Value = lblProPrice.Text
+            dgvSale.Item(3, n).Value = txtSaleAmount.Text
+            dgvSale.Item(4, n).Value = lblSaleTotal.Text
         End If
 
         Call calTotal()
@@ -239,11 +269,24 @@ Public Class frmSale
         proIDFind = ""
         Dim frmFindPro As New frmProductList
         frmFindPro.ShowDialog()
+
         If proIDFind <> "" Then
             txtProID.Text = proIDFind
             Call findProduct()
         Else
             txtProID.Focus()
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If dgvSale.RowCount = 0 Or dgvSale.SelectedRows.Count = 0 Then
+            Exit Sub
+        End If
+
+        Dim r As Integer = dgvSale.CurrentCell.RowIndex
+        If MessageBox.Show("ท่านต้องการยกเลิกรายการขายในแถวเลือกใช่หรือไม่?", "ยกเลิก...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+            dgvSale.Rows.RemoveAt(r)
+            Call calTotal()
         End If
     End Sub
 End Class
