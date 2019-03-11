@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
 
-    
+
     Private Sub ประเภทสนคาToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ประเภทสนคาToolStripMenuItem.Click
         Dim fFirst As New frmFirst
         fFirst.ShowDialog()

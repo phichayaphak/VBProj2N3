@@ -23,7 +23,21 @@ Public Class frmSale
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Close()
+        If btnExit.Text = "ออก" Then
+            Me.Close()
+        Else
+            dgvSale.Rows.Clear()
+            dgvSale.Enabled = False
+            lblSaleID.Text = ""
+            lblSaleDate.Text = ""
+            lblEmployee.Text = ""
+            lblTotal.Text = ""
+            lblDiscount.Text = ""
+            lblNet.Text = ""
+            btnSale.Text = "เปิดบิลขาย"
+            btnExit.Text = "ออก"
+        End If
+
     End Sub
 
     Private Sub frmSale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -46,8 +60,8 @@ Public Class frmSale
         If Not IsDBNull(myDR.Item("maxSale")) Then
             'B2562/0000009
             lastBillID = myDR.Item("maxSale")
-            lastBillID = Mid(lastBillID, 7)
-            'lastBillID = lastBillID.Substring(6)
+            'lastBillID = Mid(lastBillID, 7)
+            lastBillID = lastBillID.Substring(6)
 
             newBillID = Val(lastBillID) + 1
             Select Case newBillID.Length
@@ -68,8 +82,8 @@ Public Class frmSale
     End Function
 
     Private Sub btnSale_Click(sender As Object, e As EventArgs) Handles btnSale.Click
-        'Byyyy/xxxxxxx
-        'B2562/0000001
+        'Syyyy/xxxxxxx
+        'S2562/0000001
         If btnSale.Text = "เปิดบิลขาย" Then
             lblSaleID.Text = getNewBill()
             lblSaleDate.Text = Format(Date.Now, "dd/MM/") & Val(Format(Date.Now, "yyyy")) + 543
@@ -113,20 +127,10 @@ Public Class frmSale
                 myComm.CommandText = strSQL
                 myComm.ExecuteNonQuery()
             Next
-
-
-
-            MessageBox.Show("บันทึกการขายสินค้าเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            dgvSale.Rows.Clear()
-            lblSaleID.Text = ""
-            lblSaleDate.Text = ""
-            lblEmployee.Text = ""
-            lblTotal.Text = ""
-            lblDiscount.Text = ""
-            lblNet.Text = ""
-            btnSale.Text = "เปิดบิลขาย"
-            btnExit.Text = "ออก"
             myCon.Close()
+            MessageBox.Show("บันทึกการขายสินค้าเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call btnExit_Click(sender, e)
+
         End If
     End Sub
 
@@ -207,6 +211,11 @@ Public Class frmSale
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        If Val(txtSaleAmount.Text) = 0 Then
+            btnAdd.Enabled = False
+            Exit Sub
+        End If
+
         Dim found As Boolean = False
         Dim total As Double
         Dim sumAmount As Integer = Val(txtSaleAmount.Text)

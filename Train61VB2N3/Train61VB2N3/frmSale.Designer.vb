@@ -33,6 +33,7 @@ Partial Class frmSale
         Me.lblSaleID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbDetail = New System.Windows.Forms.GroupBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.dgvSale = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,7 +58,6 @@ Partial Class frmSale
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblProPrice = New System.Windows.Forms.Label()
         Me.lblProName = New System.Windows.Forms.Label()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.gbHead.SuspendLayout()
         Me.gbDetail.SuspendLayout()
         CType(Me.dgvSale, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +126,7 @@ Partial Class frmSale
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(140, 23)
         Me.Label7.TabIndex = 0
-        Me.Label7.Text = "พนักขาย"
+        Me.Label7.Text = "พนักงานขาย"
         '
         'lblSaleDate
         '
@@ -192,6 +192,15 @@ Partial Class frmSale
         Me.gbDetail.TabIndex = 1
         Me.gbDetail.TabStop = False
         Me.gbDetail.Text = "GroupBox2"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(582, 285)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(24, 26)
+        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.Text = "X"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'dgvSale
         '
@@ -293,7 +302,7 @@ Partial Class frmSale
         '
         'btnFind
         '
-        Me.btnFind.Location = New System.Drawing.Point(118, 54)
+        Me.btnFind.Location = New System.Drawing.Point(118, 52)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Size = New System.Drawing.Size(28, 26)
         Me.btnFind.TabIndex = 1
@@ -410,15 +419,6 @@ Partial Class frmSale
         Me.lblProName.Size = New System.Drawing.Size(226, 23)
         Me.lblProName.TabIndex = 0
         Me.lblProName.Text = " "
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(582, 285)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(24, 26)
-        Me.btnDelete.TabIndex = 3
-        Me.btnDelete.Text = "X"
-        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'frmSale
         '

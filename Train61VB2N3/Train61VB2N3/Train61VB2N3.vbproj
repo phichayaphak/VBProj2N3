@@ -79,6 +79,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCutomer_Mng.Designer.vb">
+      <DependentUpon>frmCutomer_Mng.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCutomer_Mng.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDB_Mng.Designer.vb">
       <DependentUpon>frmDB_Mng.vb</DependentUpon>
     </Compile>
@@ -201,6 +207,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCutomer_Mng.resx">
+      <DependentUpon>frmCutomer_Mng.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDB_Mng.resx">
       <DependentUpon>frmDB_Mng.vb</DependentUpon>
