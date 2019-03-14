@@ -33,8 +33,10 @@ Partial Class frmDB_Mng
         Me.txtEmpSalary = New System.Windows.Forms.TextBox()
         Me.txtEmpAddress = New System.Windows.Forms.TextBox()
         Me.txtEmpName = New System.Windows.Forms.TextBox()
+        Me.txtEmpPassword = New System.Windows.Forms.TextBox()
         Me.txtEmpId = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -49,8 +51,6 @@ Partial Class frmDB_Mng
         Me.btnExit = New System.Windows.Forms.Button()
         Me.gbShow = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtEmpPassword = New System.Windows.Forms.TextBox()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbData.SuspendLayout()
         Me.gbShow.SuspendLayout()
@@ -183,6 +183,14 @@ Partial Class frmDB_Mng
         Me.txtEmpName.Size = New System.Drawing.Size(191, 20)
         Me.txtEmpName.TabIndex = 4
         '
+        'txtEmpPassword
+        '
+        Me.txtEmpPassword.Location = New System.Drawing.Point(74, 76)
+        Me.txtEmpPassword.Name = "txtEmpPassword"
+        Me.txtEmpPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtEmpPassword.Size = New System.Drawing.Size(123, 20)
+        Me.txtEmpPassword.TabIndex = 4
+        '
         'txtEmpId
         '
         Me.txtEmpId.Location = New System.Drawing.Point(38, 13)
@@ -197,6 +205,14 @@ Partial Class frmDB_Mng
         Me.Label7.Size = New System.Drawing.Size(88, 23)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "เงินเดือน"
+        '
+        'Label10
+        '
+        Me.Label10.Location = New System.Drawing.Point(6, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(88, 23)
+        Me.Label10.TabIndex = 3
+        Me.Label10.Text = "รหัสผ่าน"
         '
         'Label6
         '
@@ -329,22 +345,6 @@ Partial Class frmDB_Mng
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "โปรแกรมจัดการฐานข้อมูลบุคลากร"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label10
-        '
-        Me.Label10.Location = New System.Drawing.Point(6, 76)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 23)
-        Me.Label10.TabIndex = 3
-        Me.Label10.Text = "รหัสผ่าน"
-        '
-        'txtEmpPassword
-        '
-        Me.txtEmpPassword.Location = New System.Drawing.Point(74, 76)
-        Me.txtEmpPassword.Name = "txtEmpPassword"
-        Me.txtEmpPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtEmpPassword.Size = New System.Drawing.Size(123, 20)
-        Me.txtEmpPassword.TabIndex = 4
         '
         'frmDB_Mng
         '

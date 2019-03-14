@@ -9,6 +9,7 @@ Public Class frmSale
 
     Dim myComm As New SqlCommand
     Dim myDR As SqlDataReader
+    Dim myTran As SqlTransaction
 
     Private Sub connectDB()
         If myCon.State = ConnectionState.Open Then
@@ -58,7 +59,7 @@ Public Class frmSale
         myDR.Read()
         
         If Not IsDBNull(myDR.Item("maxSale")) Then
-            'B2562/0000009
+            'B2562/0000109
             lastBillID = myDR.Item("maxSale")
             'lastBillID = Mid(lastBillID, 7)
             lastBillID = lastBillID.Substring(6)
@@ -98,39 +99,47 @@ Public Class frmSale
             End If
             connectDB()
             'บันทึกหัวใบเสร็จ
+            myTran = myCon.BeginTransaction
+
             strSQL = "Insert into Sale(saleID,  saleDate, saleDiscount, empID) " & _
                 " Values(@sid, @sdate, @sdiscount, @eid)"
             myComm = New SqlCommand(strSQL, myCon)
+            myComm.Transaction = myTran
             myComm.CommandTimeout = 15
             myComm.CommandType = CommandType.Text
-            myComm.Parameters.AddWithValue("sid", lblSaleID.Text)
-            myComm.Parameters.Add("sdate", SqlDbType.Date).Value = lblSaleDate.Text
-            myComm.Parameters.AddWithValue("sdiscount", lblDiscount.Text)
-            myComm.Parameters.AddWithValue("eid", empID)
-            myComm.ExecuteNonQuery()
-
-            For i = 0 To dgvSale.RowCount - 1
-                'บันทึกรายการขาย
-                strSQL = "Insert into SaleDetail(saleID,  proID, amount, proPrice) " & _
-               " Values(@sid, @pid, @samount, @pprice)"
-                myComm.CommandText = strSQL
-                myComm.Parameters.Clear()
+            Try
                 myComm.Parameters.AddWithValue("sid", lblSaleID.Text)
-                myComm.Parameters.AddWithValue("pid", dgvSale.Item(0, i).Value)
-                myComm.Parameters.AddWithValue("samount", dgvSale.Item(3, i).Value)
-                myComm.Parameters.AddWithValue("pprice", dgvSale.Item(2, i).Value)
+                myComm.Parameters.Add("sdate", SqlDbType.Date).Value = lblSaleDate.Text
+                myComm.Parameters.AddWithValue("sdiscount", lblDiscount.Text)
+                myComm.Parameters.AddWithValue("eid", empID)
                 myComm.ExecuteNonQuery()
 
-                'ตัดสต๊อก
-                strSQL = "update Product set proNet = proNet - @samount " & _
-                    " Where proID = @pid "
-                myComm.CommandText = strSQL
-                myComm.ExecuteNonQuery()
-            Next
-            myCon.Close()
-            MessageBox.Show("บันทึกการขายสินค้าเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Call btnExit_Click(sender, e)
+                For i = 0 To dgvSale.RowCount - 1
+                    'บันทึกรายการขาย
+                    strSQL = "Insert into SaleDetail(saleID,  proID, amount, proPrice) " & _
+                   " Values(@sid, @pid, @samount, @pprice)"
+                    myComm.CommandText = strSQL
+                    myComm.Parameters.Clear()
+                    myComm.Parameters.AddWithValue("sid", lblSaleID.Text)
+                    myComm.Parameters.AddWithValue("pid", dgvSale.Item(0, i).Value)
+                    myComm.Parameters.AddWithValue("samount", dgvSale.Item(3, i).Value)
+                    myComm.Parameters.AddWithValue("pprice", dgvSale.Item(2, i).Value)
+                    myComm.ExecuteNonQuery()
 
+                    'ตัดสต๊อก
+                    strSQL = "update Product set proNet = proNet - @samount " & _
+                        " Where proID = @pid "
+                    myComm.CommandText = strSQL
+                    myComm.ExecuteNonQuery()
+                Next
+                myCon.Close()
+                MessageBox.Show("บันทึกการขายสินค้าเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Call btnExit_Click(sender, e)
+                myTran.Commit()
+            Catch ex As Exception
+                myTran.Rollback()
+                MessageBox.Show("ไม่สามารถบันทึกข้อมูลได้ในขณะนี้ กรุณาดำเนินใหม่ในภายหลัง", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         End If
     End Sub
 

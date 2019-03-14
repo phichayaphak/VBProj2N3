@@ -13,8 +13,9 @@
     <AssemblyName>Train61VB2N3</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -25,6 +26,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Train61VB2N3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -35,6 +37,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Train61VB2N3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -49,11 +52,29 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CRVsPackageLib, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -78,6 +99,46 @@
     </Compile>
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="crpProduct.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpProductBIS2N2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpProductBIS2N2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpProductQ.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpProductQ.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpStock.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsBIS2N2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBIS2N2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNorthwindQ.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNorthwindQ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsProduct.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProduct.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmCutomer_Mng.Designer.vb">
       <DependentUpon>frmCutomer_Mng.vb</DependentUpon>
@@ -121,6 +182,12 @@
     <Compile Include="frmLab2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLookka.Designer.vb">
+      <DependentUpon>frmLookka.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLookka.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -137,6 +204,30 @@
       <DependentUpon>frmProductList.vb</DependentUpon>
     </Compile>
     <Compile Include="frmProductList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportBIS2N2.Designer.vb">
+      <DependentUpon>frmReportBIS2N2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportBIS2N2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportProduct.Designer.vb">
+      <DependentUpon>frmReportProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportStock.Designer.vb">
+      <DependentUpon>frmReportStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReqportProductQ.Designer.vb">
+      <DependentUpon>frmReqportProductQ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReqportProductQ.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSale.Designer.vb">
@@ -203,10 +294,37 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="myModule.vb" />
+    <Compile Include="myNorthwindDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myNorthwindDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpProduct.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpProductBIS2N2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpProductBIS2N2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpProductQ.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpProductQ.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpStock.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCutomer_Mng.resx">
       <DependentUpon>frmCutomer_Mng.vb</DependentUpon>
@@ -229,6 +347,9 @@
     <EmbeddedResource Include="frmLab2.resx">
       <DependentUpon>frmLab2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLookka.resx">
+      <DependentUpon>frmLookka.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +358,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductList.resx">
       <DependentUpon>frmProductList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportBIS2N2.resx">
+      <DependentUpon>frmReportBIS2N2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportProduct.resx">
+      <DependentUpon>frmReportProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportStock.resx">
+      <DependentUpon>frmReportStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReqportProductQ.resx">
+      <DependentUpon>frmReqportProductQ.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSale.resx">
       <DependentUpon>frmSale.vb</DependentUpon>
@@ -268,9 +401,45 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="dsBIS2N2.xsc">
+      <DependentUpon>dsBIS2N2.xsd</DependentUpon>
+    </None>
+    <None Include="dsBIS2N2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBIS2N2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsBIS2N2.xss">
+      <DependentUpon>dsBIS2N2.xsd</DependentUpon>
+    </None>
+    <None Include="dsNorthwindQ.xsc">
+      <DependentUpon>dsNorthwindQ.xsd</DependentUpon>
+    </None>
+    <None Include="dsNorthwindQ.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNorthwindQ.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsNorthwindQ.xss">
+      <DependentUpon>dsNorthwindQ.xsd</DependentUpon>
+    </None>
+    <None Include="dsProduct.xsc">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </None>
+    <None Include="dsProduct.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProduct.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsProduct.xss">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -291,6 +460,17 @@
     <None Include="banner_hardware.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="myNorthwindDS.xsc">
+      <DependentUpon>myNorthwindDS.xsd</DependentUpon>
+    </None>
+    <None Include="myNorthwindDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myNorthwindDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="myNorthwindDS.xss">
+      <DependentUpon>myNorthwindDS.xsd</DependentUpon>
+    </None>
     <None Include="save.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +490,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

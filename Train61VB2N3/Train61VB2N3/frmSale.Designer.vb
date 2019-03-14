@@ -35,11 +35,6 @@ Partial Class frmSale
         Me.gbDetail = New System.Windows.Forms.GroupBox()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.dgvSale = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblNet = New System.Windows.Forms.Label()
         Me.lblDiscount = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
@@ -58,6 +53,11 @@ Partial Class frmSale
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblProPrice = New System.Windows.Forms.Label()
         Me.lblProName = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbHead.SuspendLayout()
         Me.gbDetail.SuspendLayout()
         CType(Me.dgvSale, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -218,39 +218,6 @@ Partial Class frmSale
         Me.dgvSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSale.Size = New System.Drawing.Size(819, 187)
         Me.dgvSale.TabIndex = 2
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "รหัส"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ชื่อ"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 300
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "ราคา"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 150
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "จำนวน"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "เป็นเงิน"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 200
         '
         'lblNet
         '
@@ -420,6 +387,39 @@ Partial Class frmSale
         Me.lblProName.TabIndex = 0
         Me.lblProName.Text = " "
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "รหัส"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ชื่อ"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 300
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "ราคา"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 150
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "จำนวน"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "เป็นเงิน"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 200
+        '
         'frmSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -467,10 +467,10 @@ Partial Class frmSale
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents btnFind As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
 End Class

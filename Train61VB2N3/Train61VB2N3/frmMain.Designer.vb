@@ -41,6 +41,8 @@ Partial Class frmMain
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.สงสนคาToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.รบคนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnu30 = New System.Windows.Forms.ToolStripMenuItem()
         Me.รายงานการขายToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ประจำเดอนเดอนToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,8 +55,9 @@ Partial Class frmMain
         Me.mnu40 = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnu41 = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnu42 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.รายงานสนคาคงคToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblCompanyName = New System.Windows.Forms.Label()
+        Me.lblCompanyAddress = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mnuMain.SuspendLayout()
         Me.SuspendLayout()
@@ -74,7 +77,7 @@ Partial Class frmMain
         Me.PictureBox1.Image = Global.Train61VB2N3.My.Resources.Resources.banner_hardware
         Me.PictureBox1.Location = New System.Drawing.Point(264, 169)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(513, 396)
+        Me.PictureBox1.Size = New System.Drawing.Size(434, 280)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
@@ -139,59 +142,71 @@ Partial Class frmMain
         'สงซอสนคาToolStripMenuItem
         '
         Me.สงซอสนคาToolStripMenuItem.Name = "สงซอสนคาToolStripMenuItem"
-        Me.สงซอสนคาToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.สงซอสนคาToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.สงซอสนคาToolStripMenuItem.Text = "สั่งซื้อสินค้า"
         '
         'รบสนคาToolStripMenuItem
         '
         Me.รบสนคาToolStripMenuItem.Name = "รบสนคาToolStripMenuItem"
-        Me.รบสนคาToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.รบสนคาToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.รบสนคาToolStripMenuItem.Text = "รับสินค้า"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(121, 6)
         '
         'ขายสนคาToolStripMenuItem
         '
         Me.ขายสนคาToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ขายสดToolStripMenuItem, Me.ขายเชอToolStripMenuItem})
         Me.ขายสนคาToolStripMenuItem.Name = "ขายสนคาToolStripMenuItem"
-        Me.ขายสนคาToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ขายสนคาToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.ขายสนคาToolStripMenuItem.Text = "ขายสินค้า"
         '
         'ขายสดToolStripMenuItem
         '
         Me.ขายสดToolStripMenuItem.Name = "ขายสดToolStripMenuItem"
-        Me.ขายสดToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ขายสดToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.ขายสดToolStripMenuItem.Text = "ขายสด"
         '
         'ขายเชอToolStripMenuItem
         '
         Me.ขายเชอToolStripMenuItem.Name = "ขายเชอToolStripMenuItem"
-        Me.ขายเชอToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ขายเชอToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.ขายเชอToolStripMenuItem.Text = "ขายเชื่อ"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(121, 6)
         '
         'สงสนคาToolStripMenuItem
         '
         Me.สงสนคาToolStripMenuItem.Name = "สงสนคาToolStripMenuItem"
-        Me.สงสนคาToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.สงสนคาToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.สงสนคาToolStripMenuItem.Text = "ส่งสินค้า"
         '
         'รบคนToolStripMenuItem
         '
         Me.รบคนToolStripMenuItem.Name = "รบคนToolStripMenuItem"
-        Me.รบคนToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.รบคนToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.รบคนToolStripMenuItem.Text = "รับคืน"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(121, 6)
+        '
+        'SaleToolStripMenuItem
+        '
+        Me.SaleToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'mnu30
         '
-        Me.mnu30.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการขายToolStripMenuItem, Me.รายงานการซอToolStripMenuItem, Me.รายงานสนคาชำรดToolStripMenuItem})
+        Me.mnu30.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.รายงานการขายToolStripMenuItem, Me.รายงานการซอToolStripMenuItem, Me.รายงานสนคาชำรดToolStripMenuItem, Me.รายงานสนคาคงคToolStripMenuItem})
         Me.mnu30.Name = "mnu30"
         Me.mnu30.Size = New System.Drawing.Size(81, 20)
         Me.mnu30.Text = "รายงานทั่วไป"
@@ -200,7 +215,7 @@ Partial Class frmMain
         '
         Me.รายงานการขายToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ประจำเดอนเดอนToolStripMenuItem, Me.ประจำไตรมาสToolStripMenuItem, Me.ประจำปToolStripMenuItem})
         Me.รายงานการขายToolStripMenuItem.Name = "รายงานการขายToolStripMenuItem"
-        Me.รายงานการขายToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.รายงานการขายToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.รายงานการขายToolStripMenuItem.Text = "รายงานการขาย"
         '
         'ประจำเดอนเดอนToolStripMenuItem
@@ -225,7 +240,7 @@ Partial Class frmMain
         '
         Me.รายงานการซอToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.สรปรวมToolStripMenuItem, Me.แยกตามประเภทToolStripMenuItem})
         Me.รายงานการซอToolStripMenuItem.Name = "รายงานการซอToolStripMenuItem"
-        Me.รายงานการซอToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.รายงานการซอToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.รายงานการซอToolStripMenuItem.Text = "รายงานการซื้อ"
         '
         'สรปรวมToolStripMenuItem
@@ -243,7 +258,7 @@ Partial Class frmMain
         'รายงานสนคาชำรดToolStripMenuItem
         '
         Me.รายงานสนคาชำรดToolStripMenuItem.Name = "รายงานสนคาชำรดToolStripMenuItem"
-        Me.รายงานสนคาชำรดToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.รายงานสนคาชำรดToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.รายงานสนคาชำรดToolStripMenuItem.Text = "รายงานสินค้าชำรุด"
         '
         'mnu40
@@ -265,23 +280,41 @@ Partial Class frmMain
         Me.mnu42.Size = New System.Drawing.Size(136, 22)
         Me.mnu42.Text = "ออกจากระบบ"
         '
-        'ToolStripMenuItem1
+        'รายงานสนคาคงคToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        Me.รายงานสนคาคงคToolStripMenuItem.Name = "รายงานสนคาคงคToolStripMenuItem"
+        Me.รายงานสนคาคงคToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.รายงานสนคาคงคToolStripMenuItem.Text = "รายงานสินค้าคงคลัง"
         '
-        'SaleToolStripMenuItem
+        'lblCompanyName
         '
-        Me.SaleToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SaleToolStripMenuItem.Text = "Sale"
+        Me.lblCompanyName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lblCompanyName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lblCompanyName.Location = New System.Drawing.Point(133, 452)
+        Me.lblCompanyName.Name = "lblCompanyName"
+        Me.lblCompanyName.Size = New System.Drawing.Size(755, 42)
+        Me.lblCompanyName.TabIndex = 3
+        Me.lblCompanyName.Text = " "
+        Me.lblCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCompanyAddress
+        '
+        Me.lblCompanyAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lblCompanyAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lblCompanyAddress.Location = New System.Drawing.Point(133, 509)
+        Me.lblCompanyAddress.Name = "lblCompanyAddress"
+        Me.lblCompanyAddress.Size = New System.Drawing.Size(755, 42)
+        Me.lblCompanyAddress.TabIndex = 4
+        Me.lblCompanyAddress.Text = " "
+        Me.lblCompanyAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(988, 576)
+        Me.Controls.Add(Me.lblCompanyAddress)
+        Me.Controls.Add(Me.lblCompanyName)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.mnuMain)
@@ -329,4 +362,7 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SaleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents รายงานสนคาคงคToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblCompanyName As System.Windows.Forms.Label
+    Friend WithEvents lblCompanyAddress As System.Windows.Forms.Label
 End Class

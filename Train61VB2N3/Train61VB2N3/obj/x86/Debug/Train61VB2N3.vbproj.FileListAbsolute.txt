@@ -35,3 +35,10 @@ D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.xml
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.pdb
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmProductList.resources
 D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmCustomer.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmLookka.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.SplashScreen1.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.vbprojResolveAssemblyReference.cache
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmReportProduct.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmReportStock.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmReqportProductQ.resources
+D:\VBProj2N3\Train61VB2N3\Train61VB2N3\obj\x86\Debug\Train61VB2N3.frmReportBIS2N2.resources

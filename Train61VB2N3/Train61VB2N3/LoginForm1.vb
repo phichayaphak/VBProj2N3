@@ -1,6 +1,7 @@
 ﻿Imports System.Configuration
 Imports System.Data
 Imports System.Data.SqlClient
+
 Public Class LoginForm1
     Dim strCon As String = ConfigurationManager.ConnectionStrings("Train61VB2N3.My.MySettings.myConCompany").ConnectionString
     Dim strSQL As String
